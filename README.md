@@ -11,8 +11,8 @@ it may not be a trivial task to quickly summarize how much each beneficiary shou
 ### What this utility do?
 It does three things:
 1. Minimizes amount of transactions required for beneficiaries to pay off their payers.
-2. Resolves abstract payers/beneficiaries - useful for whip-rounds.
-3. Allows to proxy all transactions by a single person (optional).
+2. Resolves abstract payers/beneficiaries - useful for whip-rounds (instead of a person name you can use whip-round alias inside brackets, like `[pizza]` or `[grill]`).
+3. Allows to proxy all transactions by a single person (see the `--proxy-person` option).
 
 ### Usage
 After installation of the Composer dependencies, this utility can be used as a standalone CLI script:
@@ -24,6 +24,8 @@ php bin/debts-solver.php Transactions.xlsx C D E --skip-rows=1 --proxy-person=xy
 Arguments `C`, `D` and `E` in the example above represent columns in the spreadsheet for: Payer, Beneficiary and Amount, 
 respectively. For more detailed information about arguments and options, please refer to the help page by calling
 `php bin/debts-solver.php --help` from the CLI.
+
+Data will be presented in form of a three-column table on the standard output.
 
 You may also want to use this utility as a library, especially using classes from the `Model` and `Operation` 
 directories. Refer to the `Command/DebtSolverCommand.php` file for usage details.
