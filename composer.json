@@ -1,0 +1,24 @@
+{
+  "name": "pfcode/debts-solver",
+  "authors": [
+    {
+      "name": "pfcode",
+      "email": "mail@pfco.de"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "ext-intl": "*",
+    "symfony/console": "^6.1",
+    "phpoffice/phpspreadsheet": "^1.23"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "classes/"
+    }
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "phpunit/phpunit": "^9.5"
+  }
+}
